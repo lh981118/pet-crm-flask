@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>客户详情 - 宠物客户管理系统</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>客户详情</h1>
+        <p>查看客户完整咨询信息。</p>
+
+        <div class="detail-card">
+            <p><strong>ID：</strong>{{ customer.id }}</p>
+            <p><strong>称呼：</strong>{{ customer.name }}</p>
+            <p><strong>微信：</strong>{{ customer.wechat }}</p>
+            <p><strong>城市：</strong>{{ customer.city }}</p>
+            <p><strong>预算：</strong>{{ customer.budget }}</p>
+            <p><strong>想养的猫：</strong>{{ customer.cat_type }}</p>
+            <p><strong>客户状态：</strong>{{ customer.status }}</p>
+            <p><strong>创建时间：</strong>{{ customer.created_at }}</p>
+
+            <div class="message-box">
+                <strong>具体问题：</strong>
+                <p>{{ customer.message }}</p>
+            </div>
+        </div>
+
+        <a class="btn" href="/customers">返回客户列表</a>
+    </div>
+</body>
+</html>

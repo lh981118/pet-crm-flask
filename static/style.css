@@ -1,0 +1,151 @@
+body {
+    margin: 0;
+    font-family: Arial, "Microsoft YaHei", sans-serif;
+    background: #f6f3ef;
+    color: #2b1d14;
+}
+
+.container {
+    width: 900px;
+    margin: 80px auto;
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+}
+
+h1 {
+    margin-top: 0;
+    font-size: 36px;
+}
+
+p {
+    font-size: 18px;
+    color: #6b5646;
+}
+
+.card {
+    margin-top: 30px;
+    padding: 24px;
+    background: #fff8ef;
+    border-radius: 16px;
+    border: 1px solid #eadccf;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 20px;
+    background: #2b1d14;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: bold;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 24px;
+    background: white;
+}
+
+th, td {
+    padding: 14px 12px;
+    border-bottom: 1px solid #eadccf;
+    text-align: left;
+}
+
+th {
+    background: #fff8ef;
+    color: #2b1d14;
+}
+
+td {
+    color: #5f4b3b;
+}
+.form {
+    margin-top: 24px;
+}
+
+.form label {
+    display: block;
+    margin-top: 16px;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #2b1d14;
+}
+
+.form input,
+.form textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #eadccf;
+    border-radius: 10px;
+    font-size: 16px;
+    font-family: inherit;
+    box-sizing: border-box;
+}
+
+.form input:focus,
+.form textarea:focus {
+    outline: none;
+    border-color: #2b1d14;
+}
+
+button.btn {
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn-light {
+    background: #fff8ef;
+    color: #2b1d14;
+    border: 1px solid #eadccf;
+    margin-left: 10px;
+}
+.delete-link {
+    color: #b42318;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.delete-link:hover {
+    text-decoration: underline;
+}
+.status-link {
+    display: inline-block;
+    margin-right: 8px;
+    color: #7a4f01;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.status-link:hover {
+    text-decoration: underline;
+}
+
+.detail-card {
+    margin-top: 24px;
+    padding: 24px;
+    background: #fff8ef;
+    border-radius: 16px;
+    border: 1px solid #eadccf;
+}
+
+.detail-card p {
+    margin: 12px 0;
+}
+
+.message-box {
+    margin-top: 20px;
+    padding: 18px;
+    background: white;
+    border-radius: 12px;
+    border: 1px solid #eadccf;
+}
+
+.message-box p {
+    margin-bottom: 0;
+    line-height: 1.8;
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>客户列表 - 宠物客户管理系统</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>客户列表</h1>
+        <p>这里展示所有宠物咨询客户。</p>
+        <a class="btn" href="/customers/new">新增客户</a>      
+        <table>
+            <thead>
+                <tr>
+                     <th>ID</th>
+                        <th>称呼</th>
+                        <th>微信</th>
+                        <th>城市</th>
+                        <th>预算</th>
+                        <th>想养的猫</th>
+                        <th>状态</th>
+                        <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+             {% for customer in customers %}
+                    <tr>
+                        <td>{{ customer.id }}</td>
+                        <td>{{ customer.name }}</td>
+                        <td>{{ customer.wechat }}</td>
+                        <td>{{ customer.city }}</td>
+                        <td>{{ customer.budget }}</td>
+                        <td>{{ customer.cat_type }}</td>
+                        <td>{{ customer.status }}</td>
+                        <td>
+                            <a class="status-link" href="/customers/{{ customer.id }}">查看</a>
+                            <a class="status-link" href="/customers/{{ customer.id }}/status/已沟通">已沟通</a>
+                            <a class="status-link" href="/customers/{{ customer.id }}/status/已成交">已成交</a>
+                            <a class="status-link" href="/customers/{{ customer.id }}/status/已放弃">已放弃</a>
+                            <a class="delete-link" href="/customers/{{ customer.id }}/delete">删除</a>
+                        </td>
+                    </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+
+        <a class="btn" href="/">返回首页</a>
+    </div>
+</body>
+</html>

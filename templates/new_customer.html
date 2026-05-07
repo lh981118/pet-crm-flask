@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>新增客户 - 宠物客户管理系统</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>新增客户</h1>
+        <p>录入新的宠物咨询客户信息。</p>
+
+        <form method="POST" action="/customers/new" class="form">
+            <label>称呼</label>
+            <input type="text" name="name" placeholder="例如：张女士" required>
+
+            <label>微信号</label>
+            <input type="text" name="wechat" placeholder="客户微信号" required>
+
+            <label>所在城市</label>
+            <input type="text" name="city" placeholder="例如：成都">
+
+            <label>预算范围</label>
+            <input type="text" name="budget" placeholder="例如：3000-5000">
+
+            <label>想养什么猫</label>
+            <input type="text" name="cat_type" placeholder="例如：金渐层">
+
+            <label>具体问题</label>
+            <textarea name="message" rows="5" placeholder="记录客户具体需求"></textarea>
+
+            <button type="submit" class="btn">提交客户</button>
+            <a class="btn btn-light" href="/customers">返回客户列表</a>
+        </form>
+    </div>
+</body>
+</html>
