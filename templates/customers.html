@@ -9,6 +9,11 @@
     <div class="container">
         <h1>客户列表</h1>
         <p>这里展示所有宠物咨询客户。</p>
+        <form method="GET" action="/customers" class="search-form">
+            <input type="text" name="keyword" placeholder="搜索称呼、微信、城市、猫品种" value="{{ keyword }}">
+            <button type="submit" class="btn">搜索</button>
+            <a class="btn btn-light" href="/customers">重置</a>
+        </form>
         <a class="btn" href="/customers/new">新增客户</a>      
         <table>
             <thead>

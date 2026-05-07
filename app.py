@@ -17,21 +17,34 @@ def index():
 
 @app.route("/customers")
 def customers():
- 
+    keyword = request.args.get("keyword", "").strip()
 
     conn = get_db_connection()
     cursor = conn.cursor()
-    cursor.execute("""
-        SELECT id, name, wechat, city, budget, cat_type, status, created_at
-        FROM customers
-        ORDER BY id DESC
-    """)
+
+    if keyword:
+        search_keyword = f"%{keyword}%"
+
+        cursor.execute("""
+            SELECT id, name, wechat, city, budget, cat_type, status, created_at
+            FROM customers
+            WHERE name LIKE ?
+               OR wechat LIKE ?
+               OR city LIKE ?
+               OR cat_type LIKE ?
+            ORDER BY id DESC
+        """, (search_keyword, search_keyword, search_keyword, search_keyword))
+    else:
+        cursor.execute("""
+            SELECT id, name, wechat, city, budget, cat_type, status, created_at
+            FROM customers
+            ORDER BY id DESC
+        """)
 
     customer_list = cursor.fetchall()
-
     conn.close()
 
-    return render_template("customers.html", customers=customer_list)
+    return render_template("customers.html", customers=customer_list, keyword=keyword)
 
 
 @app.route("/customers/new", methods=["GET", "POST"])
